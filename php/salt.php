@@ -6,9 +6,8 @@ function createSalt() {
 }
 
 
-function hashbrowns($string) {
+function hashbrowns($string, $salt) {
 	$hash = hash('sha256', $string);
-	$salt = createSalt();
 	$rehash = hash('sha256', $salt . $hash);
 	return $rehash;
 }
