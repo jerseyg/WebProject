@@ -6,7 +6,8 @@
    define('DB_NAME','serverside');
    
    //Create a MySQL resource object called $db
-   $db = new mysqli(DB_HOST,DB_USER,DB_PASS,DB_NAME);
+   $db = new PDO('mysql:host=localhost;dbname=serverside','serveruser','gorgonzola7!');
+
    
  ?>
  

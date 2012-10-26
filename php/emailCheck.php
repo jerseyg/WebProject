@@ -1,12 +1,13 @@
 <?php 
 header('content-type: text/json');
+require 'connect.php';
 
-if(!isset($_POST['email']))
+if(!isset($_POST['email'])){
     exit;
+}
+
 
 $email = $_POST['email'];
-//initialize our PDO class. You will need to replace your database credentials respectively
-$db = new PDO('mysql:host=localhost;dbname=serverside','serveruser','gorgonzola7!',array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
 
 //prepare our query.
 $query = $db->prepare("SELECT * FROM accounts WHERE email = :email");
