@@ -74,23 +74,23 @@
 					<div class="span8">
 							
 
-									<form class="form-horizontal" action="signup.php" method="post">
+									<form class="form-horizontal" action="php/signup.php" method="post">
 									  <div class="control-group">
 									    <label class="control-label" for="firstName">First Name</label>
 									    <div class="controls">
-									      <input type="text" id="firstName" placeholder="First Name">
+									      <input type="text" id="firstName"  name="firstName" placeholder="First Name">
 									    </div>
 									  </div>
 									  <div class="control-group">
 									    <label class="control-label" for="lastName">Last Name</label>
 									    <div class="controls">
-									      <input type="text" id="lastName" placeholder="Last Name">
+									      <input type="text" id="lastName" name="lastName" placeholder="Last Name">
 									    </div>
 									  </div>
 									  <div class="control-group">
 									    <label class="control-label" for="inputEmail">E-mail</label>
 									    <div class="controls">
-									      <input type="text" id="inputEmail" placeholder="Email">
+									      <input type="text" id="inputEmail" name="inputEmail" placeholder="Email">
 									      <div id="divStatus"></div>
 									    </div>
 
@@ -98,7 +98,7 @@
 									  <div class="control-group">
 									    <label class="control-label" for="inputPassword">Password</label>
 									    <div class="controls">
-									      <input type="password" id="inputPassword" placeholder="Password">
+									      <input type="password" id="inputPassword" name="inputPassword" placeholder="Password">
 									    </div>
 									  </div>
 									  <div class="control-group">
@@ -107,7 +107,7 @@
 									    </div>
 									  </div>
 									</form>
-								<hr />
+			
 
 					</div>
 					<!-- Sidebar -->
@@ -154,8 +154,9 @@
 		<!-- All Javascripts at end of code -->
 
 		<script src="http://code.jquery.com/jquery-latest.js"></script>
+		<script src="http://jzaefferer.github.com/jquery-validation/jquery.validate.js"></script>
 		<script src="js/signup.js"></script>
-		<<script src="js/login.js"></script> 
+		<script src="js/login.js"></script>
 		<script src="js/bootstrap.min.js"></script>
 		</body>
 
