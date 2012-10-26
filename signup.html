@@ -5,6 +5,7 @@
 		<!-- Bootstrap -->
 			<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 		<!-- Overriding CSS -->
+			<link rel="stylesheet" type="text/css" href="css/login.css">
 			<link rel="stylesheet" type="text/css" href="css/override.css">
 		<!-- End Overriding CSS -->
 		</head>
@@ -18,6 +19,30 @@
 						<h1>Captivating Photography</h1>
 						<!--<img src="http://fakeimg.pl/960x200/?text=Title&font=lobster" alt="image"> -->
 					</div>
+									<nav>
+					<ul>
+						<li id="login">
+							<a id="login-trigger" href="#">
+								Log in 
+							</a>
+							<div id="login-content">
+								<form action="login.php" method="post">
+									<fieldset id="inputs">
+										<input id="username" type="email" name="Email" placeholder="Your email address" required>   
+										<input id="password" type="password" name="Password" placeholder="Password" required>
+									</fieldset>
+									<fieldset id="actions">
+										<input type="submit" id="submit" value="Log in">
+										<label><input type="checkbox" checked="checked"> Keep me signed in</label>
+									</fieldset>
+								</form>
+							</div>                     
+						</li>
+						<li id="signup">
+							<a href="signup.html">Sign up FREE</a>
+						</li>
+					</ul>
+				</nav>
 				</div>
 				<!-- End Title -->
 
@@ -49,7 +74,7 @@
 					<div class="span8">
 							
 
-									<form class="form-horizontal">
+									<form class="form-horizontal" action="signup.php" method="post">
 									  <div class="control-group">
 									    <label class="control-label" for="firstName">First Name</label>
 									    <div class="controls">
@@ -63,10 +88,12 @@
 									    </div>
 									  </div>
 									  <div class="control-group">
-									    <label class="control-label" for="inputEmail">Email</label>
+									    <label class="control-label" for="inputEmail">E-mail</label>
 									    <div class="controls">
 									      <input type="text" id="inputEmail" placeholder="Email">
+									      <div id="divStatus"></div>
 									    </div>
+
 									  </div>
 									  <div class="control-group">
 									    <label class="control-label" for="inputPassword">Password</label>
@@ -125,7 +152,10 @@
 			</div>
 		    <!-- End Body Container -->
 		<!-- All Javascripts at end of code -->
+
 		<script src="http://code.jquery.com/jquery-latest.js"></script>
+		<script src="js/signup.js"></script>
+		<<script src="js/login.js"></script> 
 		<script src="js/bootstrap.min.js"></script>
 		</body>
 

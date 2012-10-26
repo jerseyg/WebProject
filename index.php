@@ -19,6 +19,7 @@
 						<h1>Captivating Photography</h1>
 						<!--<img src="http://fakeimg.pl/960x200/?text=Title&font=lobster" alt="image"> -->
 					</div>
+					
 							<nav>
 					<ul>
 						<li id="login">
@@ -26,7 +27,7 @@
 								Log in 
 							</a>
 							<div id="login-content">
-								<form>
+								<form action="login.php" method="post">
 									<fieldset id="inputs">
 										<input id="username" type="email" name="Email" placeholder="Your email address" required>   
 										<input id="password" type="password" name="Password" placeholder="Password" required>
@@ -39,11 +40,12 @@
 							</div>                     
 						</li>
 						<li id="signup">
-							<a href="">Sign up FREE</a>
+							<a href="signup.html">Sign up FREE</a>
 						</li>
 					</ul>
 				</nav>
-				</div>
+			</div>
+
 				<!-- End Title -->
 
 				<!-- Nav Bar -->
@@ -105,7 +107,7 @@
 					</div>
 					<!-- Sidebar -->
 						<div class="span4">
-
+						<?php //if ($_SESSION['valid'] == 1):  ?>
 							<!-- Registered User? Unhind Side links.  -->
 							<ul class="nav nav-list">
 								<li class="nav-header"> Header</li>
@@ -114,7 +116,9 @@
 								<li class="active"><a href="#">Link</a></li>
 								<li class="active"><a href="#">Link</a></li>
 							</ul>
-
+							<?php //else:  ?>
+							<!-- Empty Area -->
+						<?php //Endif;  ?>
 							<div class="sidebar-content">
 								<h4>Announcements</h4>
 							<p><small>Bear claw apple pie donut tootsie roll marzipan wypas apple pie. Danish applicake cheesecake fruitcake. Carrot cake soufflé chocolate bar sweet roll wypas gummi bears. Pastry bear claw pie chocolate bar powder faworki ice cream caramels donut. Carrot cake cake jelly beans apple pie jelly-o tart jelly-o lemon drops gummi bears. Gummies halvah chocolate bonbon biscuit oat cake. Jelly muffin soufflé jujubes fruitcake chupa chups caramels dessert.</small></p>

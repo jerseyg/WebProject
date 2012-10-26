@@ -11,21 +11,45 @@
 	<!-- Bootstrap -->
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<!-- Overriding CSS -->
+		<link rel="stylesheet" type="text/css" href="css/login.css">
 		<link rel="stylesheet" type="text/css" href="css/override.css">
 	<!-- End Overriding CSS -->
 	</head>
 	<body>
 		<!-- Body Container -->
 		<div class="container">
-
 			<!-- Title -->
-			<div class="row">
-				<div class="span12">
-					<h1>Captivating Photography</h1>
-					<!--<img src="http://fakeimg.pl/960x200/?text=Title&font=lobster" alt="image"> -->
+				<div class="row">
+					<div class="span12">
+						<h1>Captivating Photography</h1>
+						<!--<img src="http://fakeimg.pl/960x200/?text=Title&font=lobster" alt="image"> -->
+					</div>
+									<nav>
+					<ul>
+						<li id="login">
+							<a id="login-trigger" href="#">
+								Log in 
+							</a>
+							<div id="login-content">
+								<form action="login.php" method="post">
+									<fieldset id="inputs">
+										<input id="username" type="email" name="Email" placeholder="Your email address" required>   
+										<input id="password" type="password" name="Password" placeholder="Password" required>
+									</fieldset>
+									<fieldset id="actions">
+										<input type="submit" id="submit" value="Log in">
+										<label><input type="checkbox" checked="checked"> Keep me signed in</label>
+									</fieldset>
+								</form>
+							</div>                     
+						</li>
+						<li id="signup">
+							<a href="signup.html">Sign up FREE</a>
+						</li>
+					</ul>
+				</nav>
 				</div>
-			</div>
-			<!-- End Title -->
+				<!-- End Title -->
 
 			<!-- Nav Bar -->
 			<div class="row">
@@ -107,6 +131,7 @@
 	    <!-- End Body Container -->
 	<!-- All Javascripts at end of code -->
 	<script src="http://code.jquery.com/jquery-latest.js"></script>
+	<script src="js/login.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	</body>
 
