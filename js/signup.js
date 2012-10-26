@@ -5,16 +5,16 @@
 		        var user = $.trim(name);
 		        if (email.length > 3) {
 		            status.html("Checking...."); //While our Thread works, we will show some message to indicate the progress
-		            //jQuery AJAX P
+		            //jQuery AJAX POST
 
 		            $.post("/Project/php/emailCheck.php", {email: email}, 
 		            	function(data){
 		            		if(data.exists){
-		            			status.html("<font color=red>'<b>" + email+ "</b>' is not available!</font>");
+		            			status.html("<font color=red>'<b>" + email + "</b>' is not available!</font>");
 		            		}
 		            		else{
 		            			
-		            			status.html("<font color=green>'<b>" + email+ "</b>' is available!</font>");
+		            			status.html("<font color=green>'<b>" + email + "</b>' is available!</font>");
 		            		}
 		            	}, 'JSON');
 
